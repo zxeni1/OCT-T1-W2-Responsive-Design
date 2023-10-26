@@ -1,0 +1,112 @@
+#first {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transition: 1s;
+}
+
+#first:hover {
+    height:200px;
+    width: 200px;
+    transform: scale(2) translate(50px, 50px) rotate(360deg);
+    background-color: blue;
+}
+
+img {
+    width: 100px;
+}
+
+.card-parent {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    border: 1px solid red;
+    border-radius: 20px
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 5px black;
+}
+
+#second {
+margin: 50px;
+width: 100px;
+height: 100px;
+background-color: red;
+animation-name: animation-for-second;
+animation-duration: 5s;
+animation-iteration-count: 2;
+}
+
+@keyframes animation-for-second {
+    0% {
+        width: 100px;
+    }
+    25% {
+        width: 800px;
+    }
+    50% {
+        width: 200px;
+    }
+    75% {
+        width: 400px;
+    }
+    100% {
+        width: 100px;
+    }
+
+}
+
+.parent-typing-effect {
+    display: flex;
+}
+
+#typing-effect {
+    font-size: 30px;
+    animation: typing-animation .5s infinite, change-width 2s steps(30, end) 1;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing-animation {
+    0% {
+        border-right: none;
+    }
+    100% {
+        border-right: 2px solid black;
+    }
+}
+
+@keyframes change-width {
+    0% {
+        width: 0;
+    }
+    75% {
+        width: 100%;
+    }
+}
+
+.typography {
+    margin: 100px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+/* em is related to the immediate parents font size */
+/* rem is related to the rool elements font size */
+
+body {
+    font-size: 24px;
+}
+
+:root {
+font-size: 16px;
+}
